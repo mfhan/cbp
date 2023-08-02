@@ -1,0 +1,29 @@
+name: daily
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 13 * * *'
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out this repo
+      uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.10'
+    - name: Install all necessary packages
+      run: pip install jupyter lxml pandas requests beautifulsoup4 playwright html5lib
+    - name: Install browsers
+      run: playwright install
+    - name: Scraping today's data and create csvs for visualization
+      run: jupyter nbconvert --to notebook --execute "cbp1.ipynb" --stdout
+    - name: Commit and push any changes
+      run: |-
+        git config user.name "Automated"
+        git config user.email "actions@users.noreply.github.com"
+        git add -A
+        timestamp=$(date -u)
+        git commit -m "Latest data: ${timestamp}" || exit 0
+        git push
