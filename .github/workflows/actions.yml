@@ -20,7 +20,7 @@ jobs:
     - name: Install browsers
       run: playwright install
     - name: Scraping today's data and create csvs for visualization
-      run: jupyter nbconvert --to notebook --execute "cbp1.ipynb" --stdout
+      run: jupyter nbconvert --to notebook --execute "1-cbp-scrape.ipynb" --stdout
     - name: Commit and push any changes
       run: |-
         git config user.name "Automated"
