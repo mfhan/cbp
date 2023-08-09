@@ -21,6 +21,8 @@ jobs:
       run: playwright install
     - name: Scraping today's data and create csvs for visualization
       run: jupyter nbconvert --to notebook --execute "1-cbp-scrape.ipynb" --stdout
+    - name: Adding today's data to larger csv
+      run: jupyter nbconvert --to notebook --execute "2-cbp-over-time.ipynb" --stdout
     - name: Commit and push any changes
       run: |-
         git config user.name "Automated"
