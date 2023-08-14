@@ -1,169 +1,170 @@
-
 <!doctype html>
 <html lang="en">
 
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CBP Wait Times</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
+      rel="stylesheet">
 
 
     <style>
-        .container {
-            /* Remove the line below if you want a wider page */
-          max-width: 700px !important;
-          color: #000000;
-          /* font-family: Georgia; */
-          font-family: Arial;
-        }
+      .container {
+        /* Remove the line below if you want a wider page */
+        max-width: 700px !important;
+        color: #000000;
+        /* font-family: Georgia; */
+        font-family: Arial;
+      }
 
-        img {
-          display: block;
-          width:700px;
-          margin: 0 auto;
-          transition: 0.3s;
-        }
+      img {
+        display: block;
+        width: 700px;
+        margin: 0 auto;
+        transition: 0.3s;
+      }
 
-        img.title {
-    font-size: 0.9;
-    /* border: 1px dotted blue; */
-    text-align: left;
-  }
+      img.title {
+        font-size: 0.9;
+        /* border: 1px dotted blue; */
+        text-align: left;
+      }
 
-        img.caption {
-    font-size: 0.5;
-    /* border: 1px dotted blue; */
-    text-align: left;
-  }
-          .methodology{
-          /* font-style:italic; */
-          font-size: 24px;
-          line-height: 80%;
-        }
-        a {
-          color: deepskyblue;
-        }
+      img.caption {
+        font-size: 0.5;
+        /* border: 1px dotted blue; */
+        text-align: left;
+      }
 
-        p {
-          margin-bottom:1.5em;
-          font-size: 18px;
-          font-family: Arial;
-          color: #000000;
-        }
+      .methodology {
+        /* font-style:italic; */
+        font-size: 24px;
+        line-height: 80%;
+      }
 
-        .graph-title {
-          font-family: Source Sans Pro;
-          font-weight: 600;
-          font-size: 24px;
-          color: #000000;
-        }
+      a {
+        color: deepskyblue;
+      }
 
-        .graph-subtitle {
-          font-family: Source Sans Pro;
-          font-weight: 600;
-          font-size: 16px;
-        }
+      p {
+        margin-bottom: 1.5em;
+        font-size: 18px;
+        font-family: Arial;
+        color: #000000;
+      }
 
-        h1.title {
-          font-family: Arial;
-          text-align: center;
-          font-size: 3rem;
-          line-height: 1.1;
-          margin-bottom: 0.4rem;
-          margin-top: 0.4rem;
-          font-weight: 800;
-          color: #2d2d2d;
-          max-width: 800px;
-        }
+      .graph-title {
+        font-family: Source Sans Pro;
+        font-weight: 600;
+        font-size: 24px;
+        color: #000000;
+      }
 
-        h1.title span {
-          background-color: white;
-          padding: 0 1.2rem 0.6rem;
-          -webkit-box-decoration-break: clone;
-          -ms-box-decoration-break: clone;
-          -o-box-decoration-break: clone;
-          box-decoration-break: clone;
-        }
+      .graph-subtitle {
+        font-family: Source Sans Pro;
+        font-weight: 600;
+        font-size: 16px;
+      }
 
-        h3.subtitle {
-          font-family: Arial;
-          font-weight: bold;
-          font-size: 20px;
-          color: #2d2d2d;
-          padding-top: 40px; 
-        }
+      h1.title {
+        font-family: Arial;
+        text-align: center;
+        font-size: 3rem;
+        line-height: 1.1;
+        margin-bottom: 0.4rem;
+        margin-top: 0.4rem;
+        font-weight: 800;
+        color: #2d2d2d;
+        max-width: 800px;
+      }
 
-        h3.subtitle  span {
-          background-color: white;
-          padding: 0 1.3rem 0.3rem;
-          -webkit-box-decoration-break: clone;
-          -ms-box-decoration-break: clone;
-          -o-box-decoration-break: clone;
-          box-decoration-break: clone;
-        }
+      h1.title span {
+        background-color: white;
+        padding: 0 1.2rem 0.6rem;
+        -webkit-box-decoration-break: clone;
+        -ms-box-decoration-break: clone;
+        -o-box-decoration-break: clone;
+        box-decoration-break: clone;
+      }
 
-        .has-bg-img { 
-          background: url('images/image1.png');
-          center center; 
-          background-size:cover; 
-        }
+      h3.subtitle {
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 20px;
+        color: #2d2d2d;
+        padding-top: 40px;
+      }
 
-        .hero {
-          /* max-height: 100vh; */
-          text-align: center;
-        }
+      h3.subtitle span {
+        background-color: white;
+        padding: 0 1.3rem 0.3rem;
+        -webkit-box-decoration-break: clone;
+        -ms-box-decoration-break: clone;
+        -o-box-decoration-break: clone;
+        box-decoration-break: clone;
+      }
 
-        .byline {
-          padding-top: 0px;
-          padding-bottom: 0px;
-          font-size: 18px;
-        }
+      .has-bg-img {
+        background: url('images/image1.png');
+        center center;
+        background-size: cover;
+      }
 
-        .bottomleft {
-          position: absolute;
-          bottom: 8px;
-          left: 16px;
-          font-size: 18px;
-          color: white;
-          
-          font-size: 12px;
-        }
+      .hero {
+        /* max-height: 100vh; */
+        text-align: center;
+      }
 
-        .date {
-          font-size: 14px;
-          padding-top: 5px;
-          padding-bottom: 25px;
+      .byline {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        font-size: 18px;
+      }
 
-        }
+      .bottomleft {
+        position: absolute;
+        bottom: 8px;
+        left: 16px;
+        font-size: 18px;
+        color: white;
 
+        font-size: 12px;
+      }
+
+      .date {
+        font-size: 14px;
+        padding-top: 5px;
+        padding-bottom: 25px;
+
+      }
+
+      .row-container {
+        display: flex;
+        flex-direction: row;
+        max-width: 960px;
+        margin: 0 auto;
+        gap: 2em;
+      }
+
+      .column-container {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 1;
+      }
+
+      @media (max-width: 800px) {
         .row-container {
-          display: flex;
-          flex-direction: row;
-          max-width: 960px;
-          margin: 0 auto;
-          gap: 2em;
+          flex-direction: column;
         }
-        
-        .column-container {
-          flex-grow: 1;
-          flex-shrink: 1;
-          flex-basis: 1;
-        }
-        
-        @media (max-width: 800px) {
-          .row-container {
-            flex-direction: column;
-          }
-        }
-    
+      }
     </style>
- 
 
-<body>
+
+  <body>
 
     <section class="section">
       <div class="columns is-multiline content">
@@ -171,94 +172,124 @@
         </div>
         <div class="column is-half"> -->
 
-            <div class="container">
-              <!-- <div class="hero-body">  -->
-              <!-- <div class ='content is-medium'> -->
-                <h2 class="title" align= "center" font-family ="Arial">
-                  How Long Is The Wait at JFK?<br>
-                  Take a Look at the Past 24 Hours
-                </h2>
-              <!-- </div> -->
-                <!-- <p class="title" font-family ="Arial">
+        <div class="container">
+          <!-- <div class="hero-body">  -->
+          <!-- <div class ='content is-medium'> -->
+          <h2 class="title" align="center" font-family="Arial">
+            How Long Is The Wait at JFK?<br>
+            Take a Look at the Past 24 Hours
+          </h2>
+          <!-- </div> -->
+          <!-- <p class="title" font-family ="Arial">
                   Sports Sits Atop Gulf States' Shopping List
                 </p> -->
-                <div class='text-container' align= "center">
-                <p>Marie-France Han • August 2023 • <a class="link"
-                        href="https://github.com/mfhan/cbp">Get the code</a></p>
-                        </div>
-                
-                <h3 class="graph-subtitle" font-family ="Arial">You've flown for hours in a metal tube and just landed at JFK. You are tired and eager to get into the city. But border control is awaiting.</h3>
+          <div class='text-container' align="center">
+            <p>Marie-France Han • August 2023 • <a class="link" href="https://github.com/mfhan/cbp">Get the code</a></p>
+          </div>
 
-                <p>We can't predict the future, but we can at least give you an idea of the past 24 hours' wait times at every JFK terminal processing international arrivals, thanks to Customs and Border Protection data! </p>
-                <p>Be aware that your wait time will depend on your citizenship status. US citizens typically (but not always) wait less than non-citizens. Allow extra time to retrieve your luggage and exit the airport. </p>
-                <br>
+          <h3 class="graph-subtitle" font-family="Arial">You've flown for hours in a metal tube and just landed at JFK.
+            You are tired and eager to get into the city. But border control is awaiting.</h3>
 
-
-                <div class="columns is-multiline content">
-            <div class="container">
-            <div class="methodology"> 
-    <!-- <h3 class="subtitle">Methodology</h3>  -->
-    <p><span style="font-weight: bold">Methodology: </span>Web scraping/ browser automation project for the <a href="https://ledeprogram.com/" target="_blank"> Lede Program at Columbia University</a>, summer 2023</p> 
-    <p>The code opens the Customs and Border Protection <a href="https://awt.cbp.gov/">website</a> every day at 1300 GMT, requests a wait time report for John F Kennedy International Airport, scrapes the resulting tables, reformats the data and feeds it to Datawrapper using GitHub Actions. </p>
-    <!-- <p> <span style="font-weight: bold">Date: </span>Aug 7, 2023</p> -->
-    <p><span style="font-weight: bold">Tools and Processe:</span>
-    <p>-- Wait time data collected at the Customs and Border Protection <a href="https://awt.cbp.gov/">website</a>. </p> 
-    <p>-- Browser automation implemented with <a href="https://playwright.dev/docs/input">Playwright </a> </p> 
-    <p>-- Web scraping performed with <a href="https://pypi.org/project/beautifulsoup4/">Beautiful Soup4</a>  </p> 
-    <p>-- Charts automatically generated by <a href="https://app.datawrapper.de//">Datawrapper</a>  and GitHub Actions</p> 
-    <p>-- Code and data available on <a href="https://github.com/mfhan/cbp" target="_blank">GitHub</a></i></p>
-  
-      </div>
-  </div>
-</div>
-                
-                
-                
-    
-  <div class='chart-holder'>
-    <iframe title="Border Control Wait Times, JFK Terminal 1" aria-label="Grouped Column Chart" id="datawrapper-chart-JDXra" src="https://datawrapper.dwcdn.net/JDXra/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}(); </script>
-  </div>
-<br>
-
-
-    <div class="columns is-multiline content">
-            <div class="container"> 
-            
-<iframe title="Border Control Wait Times, JFK Terminal 4" aria-label="Grouped Column Chart" id="datawrapper-chart-DFlOG" src="https://datawrapper.dwcdn.net/DFlOG/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400" data-external="1"></iframe>
-                <script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}(); </script>
-
-            </div>
-    </div>            
-        <br>
-
-    <div class="columns is-multiline content">
-            <div class="container"> 
-            
-          <iframe title="Border Control Wait Times, JFK Terminal 5" aria-label="Grouped Column Chart" id="datawrapper-chart-N2kNJ" src="https://datawrapper.dwcdn.net/N2kNJ/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}(); </script>
-
-            </div>
-    </div>
+          <p>We can't predict the future, but we can at least give you an idea of the past 24 hours' wait times at every
+            JFK terminal processing international arrivals, thanks to Customs and Border Protection data! </p>
+          <p>Be aware that your wait time will depend on your citizenship status. US citizens typically (but not always)
+            wait less than non-citizens. Allow extra time to retrieve your luggage and exit the airport. </p>
           <br>
 
-    <div class="columns is-multiline content">
+
+          <div class="columns is-multiline content">
             <div class="container">
-              
-              <iframe title="Border Control Wait Times, JFK Terminal 7" aria-label="Grouped Column Chart" id="datawrapper-chart-mS64L" src="https://datawrapper.dwcdn.net/mS64L/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
-            </div>
-        </div>
-        <br>
-                    <div style="min-height:293px">
+              <div class="methodology">
+                <!-- <h3 class="subtitle">Methodology</h3>  -->
+                <p><span style="font-weight: bold">Methodology: </span>Web scraping/ browser automation project for the
+                  <a href="https://ledeprogram.com/" target="_blank"> Lede Program at Columbia University</a>, summer
+                  2023</p>
+                <p>The code opens the Customs and Border Protection <a href="https://awt.cbp.gov/">website</a> every day
+                  at 1300 GMT, requests a wait time report for John F Kennedy International Airport, scrapes the
+                  resulting tables, reformats the data and feeds it daily to Datawrapper using GitHub Actions. </p>
+                <!-- <p> <span style="font-weight: bold">Date: </span>Aug 7, 2023</p> -->
+                <p><span style="font-weight: bold">Tools and Processes:</span>
+                <p>-- Wait time data collected at the Customs and Border Protection <a
+                    href="https://awt.cbp.gov/">website</a>. </p>
+                <p>-- Browser automation implemented with <a href="https://playwright.dev/docs/input">Playwright </a>
+                </p>
+                <p>-- Web scraping performed with <a href="https://pypi.org/project/beautifulsoup4/">Beautiful Soup4</a>
+                </p>
+                <p>-- Charts automatically generated by <a href="https://app.datawrapper.de//">Datawrapper</a> and
+                  GitHub Actions</p>
+                <p>-- Code and data available on <a href="https://github.com/mfhan/cbp" target="_blank">GitHub</a></i>
+                </p>
 
-                        <iframe title="Border Control Wait Times, JFK Terminal 8" aria-label="Grouped Column Chart" id="datawrapper-chart-rE2qZ" src="https://datawrapper.dwcdn.net/rE2qZ/5/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
-                      
-
-                    </div>
-                </div> 
               </div>
             </div>
           </div>
-              <br> 
-        <!-- <div class="columns is-multiline content">
+
+
+
+
+          <div class='chart-holder'>
+            <iframe title="Border Control Wait Times, JFK Terminal 1" aria-label="Grouped Column Chart"
+              id="datawrapper-chart-JDXra" src="https://datawrapper.dwcdn.net/JDXra/1/" scrolling="no" frameborder="0"
+              style="width: 0; min-width: 100% !important; border: none;" height="400" data-external="1"></iframe>
+            <script
+              type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) { var e = document.querySelectorAll("iframe"); for (var t in a.data["datawrapper-height"]) for (var r = 0; r < e.length; r++)if (e[r].contentWindow === a.source) { var i = a.data["datawrapper-height"][t] + "px"; e[r].style.height = i } } })) }(); </script>
+          </div>
+          <br>
+
+
+          <div class="columns is-multiline content">
+            <div class="container">
+
+              <iframe title="Border Control Wait Times, JFK Terminal 4" aria-label="Grouped Column Chart"
+                id="datawrapper-chart-DFlOG" src="https://datawrapper.dwcdn.net/DFlOG/1/" scrolling="no" frameborder="0"
+                style="width: 0; min-width: 100% !important; border: none;" height="400" data-external="1"></iframe>
+              <script
+                type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) { var e = document.querySelectorAll("iframe"); for (var t in a.data["datawrapper-height"]) for (var r = 0; r < e.length; r++)if (e[r].contentWindow === a.source) { var i = a.data["datawrapper-height"][t] + "px"; e[r].style.height = i } } })) }(); </script>
+
+            </div>
+          </div>
+          <br>
+
+          <div class="columns is-multiline content">
+            <div class="container">
+
+              <iframe title="Border Control Wait Times, JFK Terminal 5" aria-label="Grouped Column Chart"
+                id="datawrapper-chart-N2kNJ" src="https://datawrapper.dwcdn.net/N2kNJ/1/" scrolling="no" frameborder="0"
+                style="width: 0; min-width: 100% !important; border: none;" height="400" data-external="1"></iframe>
+              <script
+                type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) { var e = document.querySelectorAll("iframe"); for (var t in a.data["datawrapper-height"]) for (var r = 0; r < e.length; r++)if (e[r].contentWindow === a.source) { var i = a.data["datawrapper-height"][t] + "px"; e[r].style.height = i } } })) }(); </script>
+
+            </div>
+          </div>
+          <br>
+
+          <div class="columns is-multiline content">
+            <div class="container">
+
+              <iframe title="Border Control Wait Times, JFK Terminal 7" aria-label="Grouped Column Chart"
+                id="datawrapper-chart-mS64L" src="https://datawrapper.dwcdn.net/mS64L/1/" scrolling="no" frameborder="0"
+                style="width: 0; min-width: 100% !important; border: none;" height="400" data-external="1"></iframe>
+              <script
+                type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) { var e = document.querySelectorAll("iframe"); for (var t in a.data["datawrapper-height"]) for (var r = 0; r < e.length; r++)if (e[r].contentWindow === a.source) { var i = a.data["datawrapper-height"][t] + "px"; e[r].style.height = i } } })) }();</script>
+            </div>
+          </div>
+          <br>
+          <div style="min-height:293px">
+
+            <iframe title="Border Control Wait Times, JFK Terminal 8" aria-label="Grouped Column Chart"
+              id="datawrapper-chart-rE2qZ" src="https://datawrapper.dwcdn.net/rE2qZ/5/" scrolling="no" frameborder="0"
+              style="width: 0; min-width: 100% !important; border: none;" height="400" data-external="1"></iframe>
+            <script
+              type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) { var e = document.querySelectorAll("iframe"); for (var t in a.data["datawrapper-height"]) for (var r = 0; r < e.length; r++)if (e[r].contentWindow === a.source) { var i = a.data["datawrapper-height"][t] + "px"; e[r].style.height = i } } })) }();</script>
+
+
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+      <br>
+      <!-- <div class="columns is-multiline content">
                 <div class="container">
 
                   <h4 class='subtitle' font-weight = "600">A Global Web of Race Courses</h4>
@@ -271,14 +302,14 @@
               </div>  -->
 
 
-                    </div>
-                </div>
-                <br>     
-            </div>
+      </div>
+      </div>
+      <br>
+      </div>
 
-            </div>
-          </div>
-        <!-- </div> -->
+      </div>
+      </div>
+      <!-- </div> -->
     </section>
-  
+
   </body>
